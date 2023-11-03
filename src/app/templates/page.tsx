@@ -122,10 +122,10 @@ export default function Templates() {
                 className="container flex flex-col justify-center md:justify-end h-full pb-6 md:pb-8"
                 exit={{ opacity: 0 }}
               >
-                <p className="scroll-m-20 text-md pt-0 font-medium tracking-tight lg:text-lg md:pt-12 sm:-ml-2">
+                <p className="scroll-m-20 text-md pt-0 font-medium tracking-tight lg:text-lg md:pt-12 sm:-ml-2 xl:text-2xl 2xl:text-3xl">
                   You wanted help with:
                 </p>
-                <p className="scroll-m-20 text-md font-medium tracking-tight lg:text-lg sm:-ml-2">
+                <p className="scroll-m-20 text-md font-medium tracking-tight lg:text-lg sm:-ml-2 xl:text-2xl 2xl:text-3xl">
                   Selling more stuff
                 </p>
               </motion.div>
@@ -133,15 +133,15 @@ export default function Templates() {
             <motion.div className="flex h-full overflow-hidden md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-8 container relative pt-12 md:pt-4">
               <motion.div
                 variants={fade}
-                className="md:col-start-1 md:col-end-5 w-full h-full flex flex-col gap-4 justify-center xl:justify-end xl:pb-16 2xl:pb-32"
+                className="md:col-start-1 md:col-end-5 w-full h-full flex flex-col gap-4 justify-center xl:justify-end xl:pb-16 2xl:pb-18"
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0 }}
               >
-                <h1 className="scroll-m-20 text-xl font-medium tracking-tight lg:text-2xl md:pt-12">
+                <h1 className="scroll-m-20 text-xl font-medium tracking-tight lg:text-2xl md:pt-12 xl:text-3xl 2xl:text-4xl">
                   We recommend the landing page template: Victoria
                 </h1>
-                <p className="text-xs md:text-sm">
+                <p className="text-xs md:text-sm lg:text-base">
                   Victoria is a clean landing page template ideal for regular
                   promotions and featured products
                 </p>
