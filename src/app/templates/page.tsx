@@ -109,17 +109,17 @@ export default function Templates() {
         {show && (
           <motion.section
             key="templates"
-            className="relative h-[641px] md:h-[406px]"
+            className="relative h-[641px] md:h-[406px] xl:h-[513px] 2xl:h-[620px]"
           >
             <motion.div
-              className="absolute border-b-2 pt-8 border-tertiary h-[641px] md:h-[406px] w-screen b-0 l-0"
+              className="absolute border-b-2 pt-8 border-tertiary h-[641px] md:h-[406px] xl:h-[513px] 2xl:h-[620px] w-screen b-0 l-0"
               variants={grid}
               initial="hidden"
               animate="visible"
             >
               <motion.div
                 variants={title}
-                className="container flex flex-col justify-center md:justify-end h-full pb-6 md:pb-8 "
+                className="container flex flex-col justify-center md:justify-end h-full pb-6 md:pb-8"
                 exit={{ opacity: 0 }}
               >
                 <p className="scroll-m-20 text-md pt-0 font-medium tracking-tight lg:text-lg md:pt-12 sm:-ml-2">
@@ -133,7 +133,7 @@ export default function Templates() {
             <motion.div className="flex h-full overflow-hidden md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-8 container relative pt-12 md:pt-4">
               <motion.div
                 variants={fade}
-                className="md:col-start-1 md:col-end-5 w-full h-full flex flex-col gap-4 justify-center"
+                className="md:col-start-1 md:col-end-5 w-full h-full flex flex-col gap-4 justify-center xl:justify-end xl:pb-16 2xl:pb-32"
                 initial="hidden"
                 animate="visible"
                 exit={{ opacity: 0 }}
