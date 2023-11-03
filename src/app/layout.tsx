@@ -1,11 +1,7 @@
 "use client";
-import type { Metadata } from "next";
 import { Lora as FontSans } from "next/font/google";
 import "./globals.css";
 import Navigation from "@/components/Navigation";
-import { AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import MountContext from "@/components/Context";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 
@@ -27,16 +23,14 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        {/* <ThemeProvider
+        <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
-        > */}
-        <Navigation>
-          <AnimatePresence mode="wait">{children}</AnimatePresence>
-        </Navigation>
-        {/* </ThemeProvider> */}
+        >
+          <Navigation>{children}</Navigation>
+        </ThemeProvider>
       </body>
     </html>
   );
