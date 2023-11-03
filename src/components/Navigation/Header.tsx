@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import Icons from "@/components/icons";
@@ -58,28 +57,21 @@ export default function Header() {
     <div className="bg-primary z-50">
       <NavigationMenu className="container py-4 flex justify-between w-full">
         <NavigationMenuList>
-          <Link
-            href="/"
-            legacyBehavior
-            passHref
+          <NavigationMenuLink
+            className={cn(navigationMenuTriggerStyle(), "hover:cursor-pointer")}
           >
-            <NavigationMenuLink className={cn(navigationMenuTriggerStyle())}>
-              <Icons
-                name="Wheat"
-                className="h-8 w-8"
-              />
-            </NavigationMenuLink>
-          </Link>
+            <Icons
+              name="Wheat"
+              className="h-8 w-8"
+            />
+          </NavigationMenuLink>
           <NavigationMenuItem className="hidden md:block">
             <NavigationMenuTrigger>Getting started</NavigationMenuTrigger>
             <NavigationMenuContent>
               <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
                   <NavigationMenuLink asChild>
-                    <a
-                      className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
-                      href="/"
-                    >
+                    <div className="hover:cursor-pointer flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
                       <Icons
                         name="Accessibility"
                         className="h-6 w-6"
@@ -91,25 +83,16 @@ export default function Header() {
                         Beautifully designed components built with Radix UI and
                         Tailwind CSS.
                       </p>
-                    </a>
+                    </div>
                   </NavigationMenuLink>
                 </li>
-                <ListItem
-                  href="/docs"
-                  title="Introduction"
-                >
+                <ListItem title="Introduction">
                   Re-usable components built using Radix UI and Tailwind CSS.
                 </ListItem>
-                <ListItem
-                  href="/docs/installation"
-                  title="Installation"
-                >
+                <ListItem title="Installation">
                   How to install dependencies and structure your app.
                 </ListItem>
-                <ListItem
-                  href="/docs/primitives/typography"
-                  title="Typography"
-                >
+                <ListItem title="Typography">
                   Styles for headings, paragraphs, lists...etc
                 </ListItem>
               </ul>
@@ -123,7 +106,6 @@ export default function Header() {
                   <ListItem
                     key={component.title}
                     title={component.title}
-                    href={component.href}
                   >
                     {component.description}
                   </ListItem>
@@ -131,50 +113,32 @@ export default function Header() {
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          <NavigationMenuItem className="hidden md:block">
-            <Link
-              href="/docs"
-              legacyBehavior
-              passHref
-            >
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Documentation
-              </NavigationMenuLink>
-            </Link>
+          <NavigationMenuItem className="hidden md:block hover:cursor-pointer">
+            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+              Documentation
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <NavigationMenuList>
-          <NavigationMenuItem>
-            <Link
-              href="/login"
-              legacyBehavior
-              passHref
+          <NavigationMenuItem className="hover:cursor-pointer">
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "border-2 border-black hover:cursor-pointer"
+              )}
             >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "border-2 border-black"
-                )}
-              >
-                Log in
-              </NavigationMenuLink>
-            </Link>
+              Log in
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link
-              href="/sign-up"
-              legacyBehavior
-              passHref
+            <NavigationMenuLink
+              className={cn(
+                navigationMenuTriggerStyle(),
+                "bg-link text-white hover:cursor-pointer"
+              )}
             >
-              <NavigationMenuLink
-                className={cn(
-                  navigationMenuTriggerStyle(),
-                  "bg-link text-white"
-                )}
-              >
-                Sign Up Free
-              </NavigationMenuLink>
-            </Link>
+              Sign Up Free
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
@@ -183,16 +147,16 @@ export default function Header() {
 }
 
 const ListItem = React.forwardRef<
-  React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a">
+  React.ElementRef<"div">,
+  React.ComponentPropsWithoutRef<"div">
 >(({ className, title, children, ...props }, ref) => {
   return (
     <li>
       <NavigationMenuLink asChild>
-        <a
+        <div
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+            "hover:cursor-pointer block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
             className
           )}
           {...props}
@@ -201,7 +165,7 @@ const ListItem = React.forwardRef<
           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
             {children}
           </p>
-        </a>
+        </div>
       </NavigationMenuLink>
     </li>
   );

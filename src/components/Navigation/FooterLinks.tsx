@@ -4,12 +4,9 @@ const FooterLinks = ({ names }: { names: string[] }) => (
   <nav className="list-none">
     {names.map((name) => (
       <li key={name}>
-        <Link
-          className="text-gray-500 hover:text-gray-200 transition"
-          href="/"
-        >
+        <div className="text-gray-500 hover:text-gray-200 transition">
           {name}
-        </Link>
+        </div>
       </li>
     ))}
   </nav>
