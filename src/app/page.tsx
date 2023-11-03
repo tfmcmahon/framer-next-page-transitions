@@ -116,7 +116,7 @@ export default function Home() {
                     Not sure where to start? We&apos;re here to help you all the
                     way. Let us know what you need help with:
                   </p>
-                  <ul className="list-none pt-6 flex flex-col gap-1 md:pb-24">
+                  <ul className="md:pb-[84px] lg:pb-0 list-none pt-6 flex flex-col gap-1">
                     <div
                       onClick={handleClick}
                       className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm hover:cursor-pointer"
