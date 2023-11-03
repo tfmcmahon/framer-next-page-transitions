@@ -109,17 +109,17 @@ export default function Home() {
                   variants={fade}
                   className="md:col-start-1 md:col-end-5 self-center justify-self-center w-full h-full overflow-hidden"
                 >
-                  <h1 className="scroll-m-20 text-3xl font-medium tracking-tight lg:text-5xl md:pt-12">
+                  <h1 className="scroll-m-20 text-3xl font-medium tracking-tight lg:pb-2 lg:text-5xl md:pt-12">
                     Find a template based on your goal
                   </h1>
-                  <p className="[&:not(:first-child)]:mt-2 text-xs md:text-sm">
+                  <p className="[&:not(:first-child)]:mt-2 text-xs md:text-sm lg:text-base ">
                     Not sure where to start? We&apos;re here to help you all the
                     way. Let us know what you need help with:
                   </p>
                   <ul className="md:pb-[84px] lg:pb-0 list-none pt-6 flex flex-col gap-1">
                     <div
                       onClick={handleClick}
-                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm hover:cursor-pointer"
+                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm xl:text-base hover:cursor-pointer"
                     >
                       Growing my audience
                       <Icons
@@ -129,7 +129,7 @@ export default function Home() {
                     </div>
                     <div
                       onClick={handleClick}
-                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm hover:cursor-pointer"
+                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm xl:text-base hover:cursor-pointer"
                     >
                       Selling more stuff
                       <Icons
@@ -139,7 +139,7 @@ export default function Home() {
                     </div>
                     <div
                       onClick={handleClick}
-                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm hover:cursor-pointer"
+                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm xl:text-base hover:cursor-pointer"
                     >
                       Getting more sign ups
                       <Icons
@@ -149,7 +149,7 @@ export default function Home() {
                     </div>
                     <div
                       onClick={handleClick}
-                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm hover:cursor-pointer"
+                      className="flex gap-2 items-center text-link font-semibold text-xs md:text-sm xl:text-base hover:cursor-pointer"
                     >
                       I just want to see templates
                       <Icons
