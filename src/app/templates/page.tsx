@@ -109,28 +109,28 @@ export default function Templates() {
         {show && (
           <motion.section
             key="templates"
-            className="relative h-[641px] md:h-[406px] xl:h-[513px] 2xl:h-[620px]"
+            className="relative h-[478px] md:h-[406px] xl:h-[513px] 2xl:h-[620px]"
           >
             <motion.div
-              className="absolute border-b-2 pt-8 border-tertiary h-[641px] md:h-[406px] xl:h-[513px] 2xl:h-[620px] w-screen b-0 l-0"
+              className="absolute border-b-2 pt-8 border-tertiary h-[478px] md:h-[406px] xl:h-[513px] 2xl:h-[620px] w-screen b-0 l-0"
               variants={grid}
               initial="hidden"
               animate="visible"
             >
               <motion.div
                 variants={title}
-                className="container flex flex-col justify-center md:justify-end h-full pb-6 md:pb-8"
+                className="pt-[160px] hidden md:block md:pt-0 container flex flex-col justify-center md:justify-end h-full pb-6 md:pb-8"
                 exit={{ opacity: 0 }}
               >
-                <p className="scroll-m-20 text-md pt-0 font-medium tracking-tight lg:text-lg md:pt-12 sm:-ml-2 xl:text-2xl 2xl:text-3xl">
+                <p className="scroll-m-20 text-sm md:text-md pt-0 font-medium tracking-tight lg:text-lg md:pt-12 sm:-ml-2 xl:text-2xl 2xl:text-3xl">
                   You wanted help with:
                 </p>
-                <p className="scroll-m-20 text-md font-medium tracking-tight lg:text-lg sm:-ml-2 xl:text-2xl 2xl:text-3xl">
+                <p className="scroll-m-20 text-sm md:text-md font-medium tracking-tight lg:text-lg sm:-ml-2 xl:text-2xl 2xl:text-3xl">
                   Selling more stuff
                 </p>
               </motion.div>
             </motion.div>
-            <motion.div className="flex h-full overflow-hidden md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-8 container relative pt-12 md:pt-4">
+            <motion.div className="flex h-full max-h-[478px] md:max-h-auto overflow-hidden md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-6 md:gap-8 container relative pt-4">
               <motion.div
                 variants={fade}
                 className="md:col-start-1 md:col-end-5 w-full h-full flex flex-col gap-4 justify-center xl:justify-end xl:pb-16 2xl:pb-18"
@@ -138,7 +138,7 @@ export default function Templates() {
                 animate="visible"
                 exit={{ opacity: 0 }}
               >
-                <h1 className="scroll-m-20 text-xl font-medium tracking-tight lg:text-2xl md:pt-12 xl:text-3xl 2xl:text-4xl">
+                <h1 className="scroll-m-20 text-md md:text-xl font-medium tracking-tight lg:text-2xl md:pt-12 xl:text-3xl 2xl:text-4xl">
                   We recommend the landing page template: Victoria
                 </h1>
                 <p className="text-xs md:text-sm lg:text-base">
@@ -146,21 +146,27 @@ export default function Templates() {
                   promotions and featured products
                 </p>
                 <div className="flex gap-2">
-                  <div onClick={handleClick}>
+                  <div
+                    onClick={handleClick}
+                    className="cursor-pointer"
+                  >
                     <p
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "bg-link text-white hover:cusor-pointer hover:bg-link/80 hover:text-white"
+                        "bg-link text-white text-xs sm:text-sm hover:cusor-pointer hover:bg-link/80 hover:text-white"
                       )}
                     >
                       Select template
                     </p>
                   </div>
-                  <div onClick={handleClick}>
+                  <div
+                    onClick={handleClick}
+                    className="cursor-pointer"
+                  >
                     <p
                       className={cn(
                         navigationMenuTriggerStyle(),
-                        "border-2 border-black bg-transparent hover:cusor-pointer hover:bg-slate-200"
+                        "border-2 bg-primary text-xs sm:text-sm md:bg-transparent border-black hover:cusor-pointer hover:bg-slate-200"
                       )}
                     >
                       View template

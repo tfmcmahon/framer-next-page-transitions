@@ -104,10 +104,10 @@ export default function Home() {
               className="container"
               exit={{ opacity: 0 }}
             >
-              <motion.div className="flex md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-8 container px-0 relative">
+              <motion.div className="flex overflow-hidden md:overflow-visible max-h-[460px] md:max-h-auto md:grid flex-col md:grid-rows-1 md:grid-cols-9 gap-8 container px-0 relative">
                 <motion.div
                   variants={fade}
-                  className="md:col-start-1 md:col-end-5 self-center justify-self-center w-full h-full overflow-hidden"
+                  className="shrink-0 md:col-start-1 md:col-end-5 self-center justify-self-center w-full h-full overflow-hidden"
                 >
                   <h1 className="scroll-m-20 text-3xl font-medium tracking-tight lg:pb-2 lg:text-5xl md:pt-12">
                     Find a template based on your goal

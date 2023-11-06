@@ -4,6 +4,7 @@ import "./globals.css";
 import Navigation from "@/components/Navigation";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import { TailwindIndicator } from "@/components/TailwindIndicator";
 
 export const fontSans = FontSans({
   subsets: ["latin"],
@@ -29,6 +30,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <TailwindIndicator />
           <Navigation>{children}</Navigation>
         </ThemeProvider>
       </body>
